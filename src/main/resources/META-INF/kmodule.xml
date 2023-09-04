@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kmodule xmlns="http://jboss.org/kie/6.0.0/kmodule">
+
+    <!-- drools event listener session mapping -->
+    <kbase name="agendaeventlistenerrule" packages="agendaeventlistenerrule">
+        <ksession name="ksession-agendaeventlistenerrule"/>
+    </kbase>
+</kmodule>

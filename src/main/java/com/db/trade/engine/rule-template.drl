@@ -1,0 +1,19 @@
+template header
+
+rule
+eventType
+
+ package com.db.trade.engine;
+
+global com.db.trade.engine.AlertDecision alertDecision;
+
+template "trade"
+
+rule "trade_@{row.rowNumber}"
+when
+    @{eventType}(@{rule})
+then
+    alertDecision.setDoAlert(Boolean.TRUE);
+end
+
+end template

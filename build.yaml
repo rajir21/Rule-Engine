@@ -1,0 +1,17 @@
+BLUEPRINT:
+  APPLICATION: Kubernetes
+  OBJECT: K8s - maven
+  SUB_OBJECT: Deploy Maven Build
+  NAMESPACE: trade-engine
+  APPLICATION_POD: trade-engine
+
+OPTIONS:
+  JDK: JDK17
+  BASE_IMAGE: artfact-prd.trade.com:5001/bitnami/java:jdk17
+
+SERVICES:
+  CLUSTERIP:
+    trade-engine: deploy-service.yaml
+    protocol: http
+  CONFIG:
+    trade-engine: deploy-config.yaml
